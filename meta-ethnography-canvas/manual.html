@@ -151,7 +151,7 @@
           </p>
           <ul class="list-disc pl-6 space-y-1">
             <li>Click <strong>Backup</strong> in the top bar at the end of each work session to download a lightweight <code>.json</code> project file.</li>
-            <li>Use the <strong>Settings Menu (⚙️) ➔ Restore Project</strong> to load your <code>.json</code> backup on any computer. To keep the backup file small and fast, PDF files themselves are not saved inside the <code>.json</code> file—simply drag and drop the original PDFs back onto the screen and they will reconnect to your highlights automatically!</li>
+<li>Use the <strong>Settings Menu (⚙️) ➔ Restore Project</strong> to load your <code>.json</code> backup on any computer. To respect publisher copyright and keep the backup file lightweight, PDF files themselves are not saved inside the <code>.json</code> file—simply drag and drop the original PDFs (with the same filenames) back onto the screen and they will reconnect to your highlights automatically!</li>
           </ul>
         </div>
       </div>
@@ -342,15 +342,32 @@
       </div>
 
       <div class="space-y-4 text-slate-700">
-        <h3 class="text-lg font-bold text-slate-900">6.1 Asynchronous Team Comparison (Compare Button)</h3>
+        <h3 class="text-lg font-bold text-slate-900">6.1 Asynchronous Team Workflow & Comparison (Compare Button)</h3>
         <p>
-          If two reviewers extract concepts independently on their own computers, you can compare and merge your work without needing a cloud server:
+          To respect publisher copyright and keep backup files lightweight, <strong>PDF files themselves are not saved inside <code>.json</code> backups</strong>. Because the app reconnects PDFs by matching their <strong>filenames</strong>, we strongly recommend the following workflow when working with co-reviewers across institutions:
         </p>
-        <ol class="list-decimal pl-6 space-y-2">
-          <li>Have your co-reviewer click <strong>Backup</strong> on their computer and send you their <code>.json</code> file.</li>
-          <li>Click the teal <strong>Compare</strong> button in the top bar and drop their <code>.json</code> file into the window.</li>
-          <li>The app automatically matches studies by filename or title, calculates the overlap rate between your extracted quotes/concepts, and lets you <strong>Import & Agree</strong>, <strong>Import for Discussion</strong>, or <strong>Interleave Audit Logs</strong> with one click.</li>
-        </ol>
+
+        <!-- Recommended Team Setup Box -->
+        <div class="bg-teal-50/70 border border-teal-200 rounded-xl p-5 space-y-3">
+          <div class="font-bold text-teal-950 flex items-center space-x-2">
+            <i class="ph ph-users-three text-xl text-teal-700"></i>
+            <span>Recommended Step-by-Step Team Setup</span>
+          </div>
+          <ol class="list-decimal pl-6 space-y-2 text-sm text-slate-800 leading-relaxed">
+            <li>
+              <strong>Prepare a Private Shared Folder:</strong> Place all included full-text PDFs in a private, access-restricted shared folder (e.g., institutional OneDrive, Google Drive, Dropbox, or a shared Zotero group) so every reviewer uses the exact same PDF filenames.
+            </li>
+            <li>
+              <strong>Lead Reviewer Creates the "Starter JSON":</strong> One lead reviewer sets the <strong>Project Code</strong> and <strong>Phase 1 Aim</strong>, loads all PDFs from the shared folder, fills in the basic citation details (using <em>✨ Auto-fill</em>), and clicks <strong>Backup</strong> to export a starter <code>.json</code> template.
+            </li>
+            <li>
+              <strong>Co-Reviewers Restore & Reconnect PDFs:</strong> Co-reviewers open the app, set their own <strong>Reviewer ID</strong>, and load the starter <code>.json</code> via <strong>Settings (⚙️) ➔ Restore Project</strong>. They then drag and drop the PDFs from the shared folder into the window—the app will automatically link every PDF to its study entry by filename.
+            </li>
+            <li>
+              <strong>Extract Independently, Then Compare & Merge:</strong> After each reviewer extracts quotes and concepts on their own computer, have your co-reviewer click <strong>Backup</strong> and send you their <code>.json</code> file. Click the teal <strong>Compare</strong> button in the top bar and drop their file in to view overlap rates, <strong>Import & Agree</strong>, <strong>Import for Discussion</strong>, or <strong>Interleave Audit Logs</strong> in one click.
+            </li>
+          </ol>
+        </div>
       </div>
 
       <hr class="border-slate-100">
