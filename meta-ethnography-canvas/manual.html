@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Step-by-step user manual for Meta-Ethnography Canvas: How to extract constructs, build a synthesis matrix, log audit trails, and export manuscript tables.">
-  <link rel="canonical" href="[https://jdaeyun.github.io/meta-ethnography-canvas/manual.html](https://jdaeyun.github.io/meta-ethnography-canvas/manual.html)">
+  <link rel="canonical" href="https://jdaeyun.github.io/meta-ethnography-canvas/manual.html">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
   <title>User Manual | Meta-Ethnography Canvas</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -48,7 +48,6 @@
         <a href="index.html" class="px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">1. Overview</a>
         <a href="manual.html" class="px-3 py-2 rounded-lg bg-indigo-50 text-indigo-800 font-semibold">2. User Manual</a>
         <a href="meta-ethnography-101.html" class="px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">3. Meta-Ethnography 101</a>
-        <a href="templates.html" class="px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">4. Methods Templates</a>
         <a href="https://github.com/jdaeyun/meta-ethnography-canvas" target="_blank" rel="noopener" class="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition" title="View Source on GitHub">
           <i class="ph ph-github-logo text-xl"></i>
         </a>
@@ -103,7 +102,7 @@
           <span>Before You Begin: Complete Your Literature Screening First</span>
         </div>
         <p class="text-sm text-slate-700 leading-relaxed">
-          <strong>Meta-Ethnography Canvas</strong> is designed specifically for the <strong>post-screening synthesis phases</strong> (<em>eMERGe</em> Phases 3–7). Literature database searching, deduplication, title/abstract screening, and PRISMA flow diagram tracking are outside the scope of this tool.
+          <strong>Meta-Ethnography Canvas</strong> is designed specifically for the <strong>post-screening synthesis phases</strong> (<em>eMERGe</em> Phases 1 and 3–7; the Phase 1 aim is entered in the startup setup window). Literature database searching, deduplication, title/abstract screening, and PRISMA flow diagram tracking are outside the scope of this tool.
         </p>
         <p class="text-sm text-slate-700 leading-relaxed">
           Please complete your systematic search and study selection in your preferred reference manager or screening tool (such as Zotero, EndNote, Rayyan, or Covidence) first, and then import the <strong>final set of included full-text PDFs</strong> here for deep reading, appraisal, and conceptual translation.
@@ -139,7 +138,7 @@
       <div class="space-y-4 text-slate-700">
         <h3 class="text-lg font-bold text-slate-900">1.2 How Saving & Backups Work (Important)</h3>
         <p>
-          <strong>Auto-Save:</strong> All of your work—including uploaded PDFs, highlights, matrix rows, and notes—is saved automatically inside your web browser's local database (<em>IndexedDB</em>). You will see a green <span class="text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded">✓ Auto-saved</span> badge in the bottom right corner whenever you make a change.
+          <strong>Auto-Save:</strong> All of your work—including uploaded PDFs, highlights, matrix rows, and notes—is saved automatically inside your web browser's local database (<em>IndexedDB</em>). A green <span class="text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded">Saved</span> badge appears in the top bar whenever you make a change.
         </p>
         <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 text-base text-slate-800 space-y-2">
           <div class="font-bold text-amber-900 flex items-center space-x-2">
@@ -198,7 +197,7 @@
         <ul class="list-disc pl-6 space-y-2">
           <li><strong>✨ Auto-fill (Page 1):</strong> Click the purple <strong>✨ Auto-fill (Page 1)</strong> button at the top of the drawer to automatically detect the First Author, Publication Year, and Full Title using the PDF's internal metadata and Page 1 layout heuristics.</li>
           <li><strong>Quick Fill from Selection:</strong> While the Edit Study Info drawer is open, select any text in the PDF and click the quick buttons (<code>➔ Author</code>, <code>➔ Year</code>, <code>➔ Title</code>, <code>➔ Setting</code>, <code>➔ Sample</code>, <code>➔ Method</code>) in the popup menu—or drag selected text directly into the input boxes.</li>
-          <li><strong>Quality Appraisal & Conceptual Depth:</strong> Choose your appraisal tool (<em>CASP</em>, <em>JBI</em>, <em>MMAT</em>, <em>COREQ</em>, <em>ETQS</em>, <em>Dixon-Woods</em>, or <em>Custom</em>), select an overall quality rating (High / Moderate / Low), enter a score (e.g., <code>9/10</code>), and rate the paper's <strong>Conceptual Depth (Richness)</strong> as <em>Rich (Detailed)</em>, <em>Moderate</em>, or <em>Thin (Basic / Descriptive)</em>.</li>
+          <li><strong>Quality Appraisal & Conceptual Depth:</strong> Choose your appraisal tool (<em>CASP</em>, <em>JBI</em>, <em>MMAT</em>, <em>ETQS</em>, <em>Dixon-Woods</em>, or <em>Custom</em>), select an overall quality rating (High / Moderate / Low / Not appraised), and rate the paper's <strong>Conceptual Depth (Richness)</strong> as <em>Rich (Detailed)</em>, <em>Moderate</em>, or <em>Thin (Basic / Descriptive)</em>.</li>
         </ul>
       </div>
 
@@ -284,8 +283,8 @@
         <h3 class="text-lg font-bold text-slate-900">3.4 Using Compact View, GRADE-CERQual & Line of Argument</h3>
         <ul class="list-disc pl-6 space-y-2">
           <li><strong>🔭 Compact View:</strong> When you have many studies and themes, check <strong>🔭 Compact View</strong> in the top toolbar to hide full quotes and comment boxes so you can see your entire matrix at a glance.</li>
-          <li><strong>📊 CERQual Tab (Inside Each Row Header):</strong> Click the <strong>📊 CERQual</strong> mini-tab on the left side of any row to assess <em>Methodological Limitations</em>, <em>Coherence</em>, <em>Adequacy</em>, and <em>Relevance</em>. Click <strong>✨ Auto-suggest</strong> to generate a suggested confidence rating (High, Moderate, Low, Very low) and draft an explanation based on your ratings and contributing studies.</li>
-          <li><strong>🔗 Research Aim & Overall Model Drawer:</strong> Click the purple <strong>🔗 Research Aim & Overall Model</strong> button in the top bar to open a drawer where you can keep your Phase 1 research question visible and write your overarching <strong>Line of Argument</strong> model. Click your 3rd Order theme chips (`+ [Theme Name]`) and arrow buttons (`➔`, `⇄`, `⚡`) to build a text diagram showing how your themes connect.</li>
+          <li><strong>📊 CERQual Tab (Inside Each Row Header):</strong> Click the <strong>📊 CERQual</strong> mini-tab on the left side of any row to assess <em>Methodological Limitations</em>, <em>Coherence</em>, <em>Adequacy</em>, and <em>Relevance</em> (every domain starts as <em>Not assessed</em>). Click <strong>✨ Auto-suggest</strong> to generate a suggested confidence rating (High, Moderate, Low, Very low) and draft an explanation based on your ratings and contributing studies.</li>
+          <li><strong>🔗 Research Aim & Overall Model Drawer:</strong> Click the purple <strong>🔗 Research Aim & Overall Model</strong> button in the top bar to open a drawer where you can keep your Phase 1 research question visible and write your overarching <strong>Line of Argument</strong> model. Click your 3rd Order theme chips (`+ [Theme Name]`) and arrow buttons (`➔`, `⇄`, `⚡`) to build a text diagram showing how your themes connect. Under <strong>Concept relationship map</strong>, add relations between themes to draw a circular or left-to-right map, and use <strong>Download .svg</strong> to save it.</li>
         </ul>
       </div>
     </section>
@@ -318,17 +317,17 @@
         <h2 class="text-2xl font-bold text-slate-900">Tab 4: Export Tables for Your Manuscript</h2>
       </div>
 <p class="text-slate-700">
-        Tab 4 automatically formats your work into five publication-ready academic tables for your dissertation, journal manuscript, or supplementary appendix:
+        Tab 4 first compiles an <strong>eMERGe Methods Summary</strong> (with a 19-item checklist mapping) from your project data, then formats your work into five publication-ready academic tables for your dissertation, journal manuscript, or supplementary appendix:
       </p>
       <ol class="list-decimal pl-6 space-y-2 text-slate-700">
-        <li><strong>Table 1 — Study Characteristics & Appraisal:</strong> Lists all included studies in your chosen translation order (#1 Index Paper first), along with setting, sample, methods, quality appraisal scores, and conceptual depth.</li>
+        <li><strong>Table 1 — Study Characteristics & Appraisal:</strong> Lists all included studies in your chosen translation order (#1 Index Paper first), along with setting, sample, methods, quality appraisal ratings, and conceptual depth.</li>
         <li><strong>Table 2 — Synthesis & Line of Argument:</strong> Shows each 3rd Order Theme, its translation type, your synthesis note, supporting 2nd Order concepts, illustrating 1st Order quotes (with page numbers), contributing studies, and CERQual confidence.</li>
         <li><strong>Table 2b — Concept × Study Contribution Grid:</strong> A compact cross-tabulation matrix showing which primary studies contributed to each 3rd Order theme (<span class="font-bold">●</span> = Reciprocal contribution; <span class="font-bold text-rose-700">⚡</span> = Refutational contribution; <code>—</code> = Not present), along with page numbers and study counts (<em>n/N</em>).</li>
-        <li><strong>Table 3 — GRADE-CERQual SoQF Table:</strong> A complete Summary of Qualitative Findings (SoQF) & Evidence Profile table showing all four CERQual domains and your explanation for each finding.</li>
+        <li><strong>Table 3 — GRADE-CERQual SoQF Table:</strong> A Summary of Qualitative Findings (SoQF) and/or Evidence Profile showing all four CERQual domains and your explanation for each finding. Choose a combined table, SoQF only, Evidence Profile only, or two separate tables (3a / 3b) from the dropdown above the preview.</li>
         <li><strong>Appendix — Audit Trail:</strong> A chronological table of your interpretive decisions, team concordance records, and reflexive memos.</li>
       </ol>
       <p class="text-slate-700 pt-2">
-        <strong>Export Options:</strong> Click <strong>Copy Rich Table</strong> to paste the currently viewed table directly into Microsoft Word or Google Docs with borders and formatting intact. You can also <strong>Copy Markdown</strong>, download all five tables together in a single landscape <strong>Word (.docx)</strong> document, or download a <strong>Raw CSV</strong> of your entire synthesis matrix.
+        <strong>Export Options:</strong> Click <strong>Copy Rich Table</strong> to paste the currently viewed table directly into Microsoft Word or Google Docs with borders and formatting intact. You can also <strong>Copy Markdown</strong>, download the Methods Summary and all five tables together in a single landscape <strong>Word (.docx)</strong> document, or download a <strong>Raw CSV</strong> of your entire synthesis matrix.
       </p>
     </section>
 
@@ -414,9 +413,9 @@
   <footer class="bg-white border-t border-slate-200 py-8 px-6 mt-12">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between text-sm text-slate-500 gap-4">
       <div>
-        <div><strong>Meta-Ethnography Canvas</strong> — Built for transparent qualitative evidence synthesis.</div>
+        <div><strong>Meta-Ethnography Canvas</strong> v1.1.0 — Built for transparent qualitative evidence synthesis.</div>
         <div class="text-xs text-slate-400 mt-1">
-          © 2026 Jeong, Dae Yun. Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener" class="underline hover:text-slate-600">MIT License</a>.
+          © 2026 Jeong, Dae Yun. Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener" class="underline hover:text-slate-600">MIT License</a>. <a href="https://doi.org/10.5281/zenodo.24200376" target="_blank" rel="noopener" class="underline hover:text-slate-600">doi:10.5281/zenodo.24200376</a>
         </div>
       </div>
       <div class="flex items-center space-x-4">
@@ -425,8 +424,6 @@
         <a href="manual.html" class="hover:text-slate-800">Manual</a>
         <span>•</span>
         <a href="meta-ethnography-101.html" class="hover:text-slate-800">101 Guide</a>
-        <span>•</span>
-        <a href="templates.html" class="hover:text-slate-800">Templates</a>
         <span>•</span>
         <a href="https://github.com/jdaeyun/meta-ethnography-canvas" target="_blank" rel="noopener" class="hover:text-slate-800 flex items-center space-x-1">
           <i class="ph ph-github-logo"></i>
