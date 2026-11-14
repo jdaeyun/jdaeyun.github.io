@@ -30,18 +30,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 18px;
-      line-height: 1.75;
-      color: #1e293b;
-      background-color: #f8fafc;
-    }
-    h1, h2, h3, .serif-heading {
-      font-family: 'Merriweather', Georgia, serif;
-    }
-  </style>
+  <link rel="stylesheet" href="css/site.css">
+  <!-- Version / release date / DOI come from the synced app (single source: app/version.js) -->
+  <script src="app/version.js"></script>
+  <script src="js/site.js" defer></script>
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -96,14 +88,18 @@
           <i class="ph ph-book-open text-xl"></i>
           <span>Read the User Manual</span>
         </a>
+        <a href="#offline" class="inline-flex items-center space-x-2 px-5 py-3.5 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-semibold rounded-xl transition">
+          <i class="ph ph-download-simple text-xl"></i>
+          <span>Offline Edition</span>
+        </a>
       </div>
       <p class="mt-4 text-sm text-slate-500 flex items-center space-x-1.5">
         <i class="ph ph-desktop text-base text-slate-400"></i>
-        <span>Designed for desktop/laptop browsers with an active internet connection.</span>
+        <span>Designed for desktop/laptop browsers. Use it online, or download the <a href="#offline" class="underline hover:text-slate-700">offline edition</a>.</span>
         <span class="text-slate-300">•</span>
-        <span>v1.1.0</span>
+        <span>v<span data-mec="version">1.1.0</span></span>
         <span class="text-slate-300">•</span>
-        <a href="https://doi.org/10.5281/zenodo.24200375" target="_blank" rel="noopener" class="underline hover:text-slate-700">DOI: 10.5281/zenodo.24200375</a>
+        <a href="https://doi.org/10.5281/zenodo.24200375" target="_blank" rel="noopener" class="underline hover:text-slate-700">DOI: <span data-mec="doi">10.5281/zenodo.24200375</span></a>
       </p>
     </div>
   </section>
@@ -191,7 +187,7 @@
           </div>
           <h3 class="text-xl font-bold text-slate-900">3. Reflexive Audit Trail & Team Merge</h3>
           <p class="text-slate-600 text-base leading-relaxed">
-            Automatically log interpretive decisions (study ordering, theme evolution, CERQual rationales) and record reflexive positionality memos. Working in a team? Load a co-reviewer's <code>.json</code> file to calculate extraction concordance and merge constructs in browser.
+            Automatically log interpretive decisions (study ordering, theme evolution, CERQual rationales) and record reflexive positionality memos. Working in a team? Load a co-reviewer's <code>.json</code> file to compare extractions, flag divergent interpretations, and merge constructs in the browser.
           </p>
         </div>
 
@@ -223,6 +219,39 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Offline Edition -->
+    <section id="offline" class="bg-white p-8 md:p-10 rounded-2xl border border-slate-200 shadow-xs space-y-5">
+      <div class="flex items-center space-x-2.5 text-indigo-700 font-semibold text-sm uppercase tracking-wider">
+        <i class="ph ph-wifi-slash text-lg"></i>
+        <span>Offline Edition</span>
+      </div>
+      <h2 class="text-2xl font-bold text-slate-900">Work without an internet connection</h2>
+      <p class="text-slate-700">
+        The same workspace is also available as a ZIP file that runs entirely on your computer—useful on restricted hospital or university networks, while travelling, or wherever you prefer not to depend on a connection. It contains exactly the same app as the online version, with all libraries included.
+      </p>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="https://github.com/jdaeyun/meta-ethnography-canvas/releases/latest/download/meta-ethnography-canvas-offline.zip" class="inline-flex items-center space-x-2 px-5 py-3 bg-indigo-700 hover:bg-indigo-800 text-white font-semibold rounded-xl shadow-xs transition text-base">
+          <i class="ph ph-download-simple text-xl"></i>
+          <span>Download Offline Edition (v<span data-mec="version">1.1.0</span>, .zip)</span>
+        </a>
+        <a href="https://github.com/jdaeyun/meta-ethnography-canvas/releases" target="_blank" rel="noopener" class="text-sm text-slate-600 underline hover:text-slate-900">All releases &amp; earlier versions</a>
+      </div>
+      <ol class="list-decimal pl-6 space-y-1.5 text-slate-700 text-base">
+        <li>Extract the whole ZIP file to a folder (do not open the files from inside the ZIP).</li>
+        <li>Double-click <code>me_canvas.html</code> to open the app in Chrome, Edge, or Firefox.</li>
+        <li>Keep <code>me_canvas.html</code> next to the <code>app/</code> folder—the app needs both.</li>
+      </ol>
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 text-base text-slate-800 space-y-1.5">
+        <div class="font-bold text-amber-900 flex items-center space-x-2">
+          <i class="ph ph-floppy-disk text-xl text-amber-700"></i>
+          <span>Online and offline projects are stored separately</span>
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          Each version keeps its own data in your browser. To move a project between them—or to another computer—use <strong>Backup</strong> and <strong>Settings (⚙️) ➔ Restore Project</strong>, then drop the same PDFs back in to reconnect them by filename. Very large PDFs may feel slightly slower in the offline edition.
+        </p>
       </div>
     </section>
 
@@ -313,32 +342,32 @@
       </div>
       <h2 class="text-2xl font-bold text-slate-900">How to Cite &amp; Describe It in Your Methods</h2>
       <p class="text-slate-700">
-        If you use Meta-Ethnography Canvas in a protocol, manuscript, or dissertation, please cite the archived release. The current version is <strong>1.1.0</strong>.
+        If you use Meta-Ethnography Canvas in a protocol, manuscript, or dissertation, please cite the archived release. The current version is <strong data-mec="version">1.1.0</strong>.
       </p>
       <a href="https://doi.org/10.5281/zenodo.24200375" target="_blank" rel="noopener" class="inline-flex items-center space-x-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg text-sm font-semibold text-slate-800 transition">
         <i class="ph ph-link text-base"></i>
-        <span>DOI: 10.5281/zenodo.24200375</span>
+        <span>DOI: <span data-mec="doi">10.5281/zenodo.24200375</span></span>
       </a>
 
       <h3 class="text-lg font-bold text-slate-900 pt-2">APA (7th ed.)</h3>
-      <pre class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-700 whitespace-pre-wrap break-words font-mono">Jeong, D. Y. (2026). <em>Meta-Ethnography Canvas: An open-source workspace for meta-ethnography, with reporting outputs structured around eMERGe</em> (Version 1.1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24200375</pre>
+      <pre class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-700 whitespace-pre-wrap break-words font-mono">Jeong, D. Y. (<span data-mec="year">2026</span>). <em>Meta-Ethnography Canvas: An open-source workspace for meta-ethnography, with reporting outputs structured around eMERGe</em> (Version <span data-mec="version">1.1.0</span>) [Computer software]. Zenodo. https://doi.org/<span data-mec="doi">10.5281/zenodo.24200375</span></pre>
 
       <h3 class="text-lg font-bold text-slate-900 pt-2">BibTeX</h3>
-      <pre class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-700 whitespace-pre-wrap break-words font-mono">@software{jeong2026metaethnography,
+      <pre class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-700 whitespace-pre-wrap break-words font-mono">@software{jeong_metaethnography_canvas,
   author    = {Jeong, Dae Yun},
   title     = {{Meta-Ethnography Canvas: An open-source workspace for meta-ethnography, with reporting outputs structured around eMERGe}},
-  year      = {2026},
-  version   = {1.1.0},
+  year      = {<span data-mec="year">2026</span>},
+  version   = {<span data-mec="version">1.1.0</span>},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.24200375},
-  url       = {https://doi.org/10.5281/zenodo.24200375}
+  doi       = {<span data-mec="doi">10.5281/zenodo.24200375</span>},
+  url       = {https://doi.org/<span data-mec="doi">10.5281/zenodo.24200375</span>}
 }</pre>
 
       <h3 class="text-lg font-bold text-slate-900 pt-2">Suggested wording for your Methods section</h3>
       <p class="text-slate-700 text-base">
         Adapt as needed. The app also compiles a fuller <em>eMERGe Methods Summary</em> from your own project data in Tab 4.
       </p>
-      <pre class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-700 whitespace-pre-wrap break-words font-mono">We conducted a meta-ethnography following Noblit and Hare (1988) and reported it according to the eMERGe reporting guidance (France et al., 2019). Study PDFs were read, 1st and 2nd order constructs were extracted, and translations were mapped using Meta-Ethnography Canvas (Version 1.1.0; Jeong, 2026), a browser-based workspace in which all data were stored locally. Confidence in each synthesized finding was assessed with GRADE-CERQual (Lewin et al., 2018). Interpretive decisions and reflexive memos were recorded in the software's audit trail.</pre>
+      <pre class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-700 whitespace-pre-wrap break-words font-mono">We conducted a meta-ethnography following Noblit and Hare (1988) and reported it according to the eMERGe reporting guidance (France et al., 2019). Study PDFs were read, 1st and 2nd order constructs were extracted, and translations were mapped using Meta-Ethnography Canvas (Version <span data-mec="version">1.1.0</span>; Jeong, <span data-mec="year">2026</span>), a browser-based workspace in which all data were stored locally. Confidence in each synthesized finding was assessed with GRADE-CERQual (Lewin et al., 2018). Interpretive decisions and reflexive memos were recorded in the software's audit trail.</pre>
     </section>
 
   </main>
@@ -347,9 +376,9 @@
   <footer class="bg-white border-t border-slate-200 py-8 px-6 mt-12">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between text-sm text-slate-500 gap-4">
       <div>
-        <div><strong>Meta-Ethnography Canvas</strong> v1.1.0 — Built for transparent qualitative evidence synthesis.</div>
+        <div><strong>Meta-Ethnography Canvas</strong> v<span data-mec="version">1.1.0</span> — Built for transparent qualitative evidence synthesis.</div>
         <div class="text-xs text-slate-400 mt-1">
-        © 2026 Jeong, Dae Yun. Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener" class="underline hover:text-slate-600">MIT License</a>. <a href="https://doi.org/10.5281/zenodo.24200375" target="_blank" rel="noopener" class="underline hover:text-slate-600">doi:10.5281/zenodo.24200375</a>
+        © 2026 Jeong, Dae Yun. Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener" class="underline hover:text-slate-600">MIT License</a>. <a href="https://doi.org/10.5281/zenodo.24200375" target="_blank" rel="noopener" class="underline hover:text-slate-600">doi:<span data-mec="doi">10.5281/zenodo.24200375</span></a>
         </div>
       </div>
       <div class="flex items-center space-x-4">

@@ -12,22 +12,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 18px;
-      line-height: 1.75;
-      color: #1e293b;
-      background-color: #f8fafc;
-      scroll-behavior: smooth;
-    }
-    h1, h2, h3, .serif-heading {
-      font-family: 'Merriweather', Georgia, serif;
-    }
-    kbd {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    }
-  </style>
+  <link rel="stylesheet" href="css/site.css">
+  <!-- Version / release date / DOI come from the synced app (single source: app/version.js) -->
+  <script src="app/version.js"></script>
+  <script src="js/site.js" defer></script>
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -112,11 +100,11 @@
       <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-base text-slate-700 space-y-2">
         <div class="font-bold text-slate-900 flex items-center space-x-2">
           <i class="ph ph-desktop text-xl text-indigo-700"></i>
-          <span>System Requirements (Desktop & Online)</span>
+          <span>System Requirements (Desktop, Online or Offline)</span>
         </div>
         <ul class="list-disc pl-6 space-y-1 text-sm text-slate-600">
           <li><strong>Desktop or Laptop Computer:</strong> Because meta-ethnography involves reading full-text PDFs side-by-side and dragging concepts across wide synthesis matrices, the workspace is designed for desktop/laptop screens with a mouse or trackpad (smartphones and small tablets are not supported).</li>
-          <li><strong>Internet Connection:</strong> While your PDFs and synthesis data stay 100% private in your browser, an active internet connection is required to load the PDF rendering engine and Word export libraries.</li>
+          <li><strong>Online or Offline:</strong> Your PDFs and synthesis data always stay private in your browser. The online version needs an internet connection to open the page; the <a href="index.html#offline" class="underline hover:text-slate-900">offline edition</a> (a ZIP file—extract it and double-click <code>me_canvas.html</code>) runs with no connection at all. The two keep separate data: use <strong>Backup</strong> and <strong>Restore Project</strong> to move a project between them.</li>
           <li><strong>Recommended Browsers:</strong> Up-to-date versions of Google Chrome, Microsoft Edge, Firefox, or Safari.</li>
         </ul>
       </div>
@@ -273,7 +261,7 @@
           <span class="inline-flex items-center space-x-1 text-xs font-bold text-white bg-indigo-600 px-2.5 py-0.5 rounded-md shadow-xs mx-1"><i class="ph ph-file-pdf"></i><span>PDF p.4</span><i class="ph ph-arrow-square-out"></i></span>.
         </p>
         <p>
-          Clicking this button immediately switches back to Tab 1, opens that study's PDF to the exact page, scrolls to the highlighted passage, and flashes it in yellow so you can re-read the surrounding paragraph. Linked 1st Order quotes inside matrix cells also have their own clickable <code>p.X</code> buttons.
+          Clicking this button immediately switches back to Tab 1, opens that study's PDF to the exact page, scrolls to the highlighted passage, and flashes it in yellow so you can re-read the surrounding paragraph. Linked 1st Order quotes inside matrix cells show their page numbers (<code>p.X</code>).
         </p>
       </div>
 
@@ -283,7 +271,7 @@
         <h3 class="text-lg font-bold text-slate-900">3.4 Using Compact View, GRADE-CERQual & Line of Argument</h3>
         <ul class="list-disc pl-6 space-y-2">
           <li><strong>🔭 Compact View:</strong> When you have many studies and themes, check <strong>🔭 Compact View</strong> in the top toolbar to hide full quotes and comment boxes so you can see your entire matrix at a glance.</li>
-          <li><strong>📊 CERQual Tab (Inside Each Row Header):</strong> Click the <strong>📊 CERQual</strong> mini-tab on the left side of any row to assess <em>Methodological Limitations</em>, <em>Coherence</em>, <em>Adequacy</em>, and <em>Relevance</em> (every domain starts as <em>Not assessed</em>). Click <strong>✨ Auto-suggest</strong> to generate a suggested confidence rating (High, Moderate, Low, Very low) and draft an explanation based on your ratings and contributing studies.</li>
+          <li><strong>📊 CERQual Tab (Inside Each Row Header):</strong> Click the <strong>📊 CERQual</strong> mini-tab on the left side of any row to assess <em>Methodological Limitations</em>, <em>Coherence</em>, <em>Adequacy</em>, and <em>Relevance</em> (every domain starts as <em>Not assessed</em>). Write why you chose each rating, then set the overall confidence (High, Moderate, Low, Very low) and explain it as a reasoned judgement across the four components; the app warns you if a confidence level has no explanation.</li>
           <li><strong>🔗 Research Aim & Overall Model Drawer:</strong> Click the purple <strong>🔗 Research Aim & Overall Model</strong> button in the top bar to open a drawer where you can keep your Phase 1 research question visible and write your overarching <strong>Line of Argument</strong> model. Click your 3rd Order theme chips (`+ [Theme Name]`) and arrow buttons (`➔`, `⇄`, `⚡`) to build a text diagram showing how your themes connect. Under <strong>Concept relationship map</strong>, add relations between themes to draw a circular or left-to-right map, and use <strong>Download .svg</strong> to save it.</li>
         </ul>
       </div>
@@ -321,8 +309,8 @@
       </p>
       <ol class="list-decimal pl-6 space-y-2 text-slate-700">
         <li><strong>Table 1 — Study Characteristics & Appraisal:</strong> Lists all included studies in your chosen translation order (#1 Index Paper first), along with setting, sample, methods, quality appraisal ratings, and conceptual depth.</li>
-        <li><strong>Table 2 — Synthesis & Line of Argument:</strong> Shows each 3rd Order Theme, its translation type, your synthesis note, supporting 2nd Order concepts, illustrating 1st Order quotes (with page numbers), contributing studies, and CERQual confidence.</li>
-        <li><strong>Table 2b — Concept × Study Contribution Grid:</strong> A compact cross-tabulation matrix showing which primary studies contributed to each 3rd Order theme (<span class="font-bold">●</span> = Reciprocal contribution; <span class="font-bold text-rose-700">⚡</span> = Refutational contribution; <code>—</code> = Not present), along with page numbers and study counts (<em>n/N</em>).</li>
+        <li><strong>Table 2 — Synthesis & Line of Argument:</strong> Shows each 3rd Order Theme, its translation type, your translation summary (Step A) and 3rd order interpretation (Step B), supporting 2nd Order concepts, illustrating 1st Order quotes (with page numbers), contributing studies, and CERQual confidence.</li>
+        <li><strong>Table 2b — Concept × Study Contribution Grid:</strong> A compact cross-tabulation matrix showing which primary studies contributed to each 3rd Order theme (<span class="font-bold">◆</span> = study #1, which establishes the rows; <span class="font-bold">●</span> = Reciprocal contribution; <span class="font-bold text-rose-700">⚡</span> = Refutational contribution; <code>—</code> = Not present), along with page numbers.</li>
         <li><strong>Table 3 — GRADE-CERQual SoQF Table:</strong> A Summary of Qualitative Findings (SoQF) and/or Evidence Profile showing all four CERQual domains and your explanation for each finding. Choose a combined table, SoQF only, Evidence Profile only, or two separate tables (3a / 3b) from the dropdown above the preview.</li>
         <li><strong>Appendix — Audit Trail:</strong> A chronological table of your interpretive decisions, team concordance records, and reflexive memos.</li>
       </ol>
@@ -363,7 +351,7 @@
               <strong>Co-Reviewers Restore & Reconnect PDFs:</strong> Co-reviewers open the app, set their own <strong>Reviewer ID</strong>, and load the starter <code>.json</code> via <strong>Settings (⚙️) ➔ Restore Project</strong>. They then drag and drop the PDFs from the shared folder into the window—the app will automatically link every PDF to its study entry by filename.
             </li>
             <li>
-              <strong>Extract Independently, Then Compare & Merge:</strong> After each reviewer extracts quotes and concepts on their own computer, have your co-reviewer click <strong>Backup</strong> and send you their <code>.json</code> file. Click the teal <strong>Compare</strong> button in the top bar and drop their file in to view overlap rates, <strong>Import & Agree</strong>, <strong>Import for Discussion</strong>, or <strong>Interleave Audit Logs</strong> in one click.
+              <strong>Extract Independently, Then Compare & Merge:</strong> After each reviewer extracts quotes and concepts on their own computer, have your co-reviewer click <strong>Backup</strong> and send you their <code>.json</code> file. Click the teal <strong>Compare</strong> button in the top bar and drop their file in to review <strong>Divergent Interpretations</strong> and <strong>Unique Extractions</strong>, then <strong>Import & Agree</strong>, <strong>Import as Discuss</strong>, or <strong>Interleave Audit Logs</strong> in one click.
             </li>
           </ol>
         </div>
@@ -413,9 +401,9 @@
   <footer class="bg-white border-t border-slate-200 py-8 px-6 mt-12">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between text-sm text-slate-500 gap-4">
       <div>
-        <div><strong>Meta-Ethnography Canvas</strong> v1.1.0 — Built for transparent qualitative evidence synthesis.</div>
+        <div><strong>Meta-Ethnography Canvas</strong> v<span data-mec="version">1.1.0</span> — Built for transparent qualitative evidence synthesis.</div>
         <div class="text-xs text-slate-400 mt-1">
-          © 2026 Jeong, Dae Yun. Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener" class="underline hover:text-slate-600">MIT License</a>. <a href="https://doi.org/10.5281/zenodo.24200376" target="_blank" rel="noopener" class="underline hover:text-slate-600">doi:10.5281/zenodo.24200376</a>
+          © 2026 Jeong, Dae Yun. Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener" class="underline hover:text-slate-600">MIT License</a>. <a href="https://doi.org/10.5281/zenodo.24200375" target="_blank" rel="noopener" class="underline hover:text-slate-600">doi:<span data-mec="doi">10.5281/zenodo.24200375</span></a>
         </div>
       </div>
       <div class="flex items-center space-x-4">
